@@ -1,42 +1,146 @@
-#root {
-  max-width: 1280px;
+/* Basic Reset & Setup */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 20px;
+}
+.app-container {
+  max-width: 800px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+h1, h2, h3, h4 {
+  color: #333;
+}
+hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+/* Form Styling */
+form {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+form input[type="text"],
+form input[type="datetime-local"] {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+form button {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+form button:hover {
+  background-color: #0056b3;
 }
 
-.card {
-  padding: 2em;
+/* Mata Kuliah Item */
+.matkul-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  overflow: hidden; /* Contains children */
+}
+.matkul-header {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.matkul-header h3 {
+  margin: 0;
+  color: #0056b3;
+}
+.matkul-header p {
+  margin: 0;
+  color: #555;
+}
+.delete-matkul-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.read-the-docs {
-  color: #888;
+/* Tugas Section */
+.tugas-section {
+  padding: 15px;
+}
+.tugas-form {
+  padding-top: 10px;
+  border-top: 1px dashed #eee;
+}
+
+/* Tugas Item (Tracker) */
+.tugas-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+.tugas-item:last-child {
+  border-bottom: none;
+}
+.tugas-info {
+  display: flex;
+  flex-direction: column;
+}
+.tugas-info strong {
+  font-size: 1.1em;
+}
+.tugas-info span {
+  font-size: 0.9em;
+  color: #666;
+}
+.tugas-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.delete-tugas-btn {
+  background: none;
+  border: none;
+  color: #dc3545;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+/* Status Dropdown Styling */
+.status-dropdown {
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-weight: bold;
+}
+.status-Belum-Dikerjakan {
+  background-color: #ffebeB; /* Light red */
+  color: #5c0000;
+}
+.status-Sedang-Dikerjakan {
+  background-color: #fff8e1; /* Light yellow */
+  color: #664f00;
+}
+.status-Selesai {
+  background-color: #e6ffed; /* Light green */
+  color: #004d00;
 }
